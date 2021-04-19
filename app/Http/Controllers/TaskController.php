@@ -8,6 +8,6 @@ class TaskController extends Controller
 {
     public function index(Task $task)
     {
-        return view('Task,index')->with(['tasks' => $task->get()]);  
+        return view('Task.index')->with(['tasks' => $task->get()]);  
     }
 }

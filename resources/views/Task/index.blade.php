@@ -7,12 +7,11 @@
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
     </head>
     <body>
-        <h1>ToDo</h1>
         <div class='todos'>
             <div class='todo'>
-            <h2 class='title'>やること</h2>
-            <h2 class='title'>持ち物リスト</h2>
-            <h2 class='title'>お金</h2>
+            <h1 class='title'>todo</h1>
+            <h1 class='title'>持ち物</h1>
+            <h1 class='title'>お金</h1>
             </div>
         </div>
     </body>
