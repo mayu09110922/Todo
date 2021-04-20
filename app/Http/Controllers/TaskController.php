@@ -10,4 +10,8 @@ class TaskController extends Controller
     {
         return view('Task.index')->with(['tasks' => $task->get()]);  
     }
+    public function show(Task $task)
+    {
+        return view('Task.show')->with(['task' => $task]);
+    }
 }
