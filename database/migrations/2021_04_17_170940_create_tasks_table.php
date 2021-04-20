@@ -18,10 +18,7 @@ class CreateTasksTable extends Migration
             $table->string('title', 50);
             $table->text('body');
             $table->timestamps();
-            $table->timestamp('deleted_at');
             $table->date('limit');
-            $table->timestamp('copy');
-            $table->timestamp('move');
         });
     }
 
