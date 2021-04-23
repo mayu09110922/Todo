@@ -7,21 +7,15 @@
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
     </head>
     <body>
-        <div class='task'>
             <h1>ToDo</h1>
-            <h2 class='title'>やること</h2>
-            <h2 class='title'>新規作成</h2>
-        </div>
-        <div class='task'>
-            <h1>持ち物リスト</h1>
-            <h2 class='title'>本</h2>
-            <h2 class='title'>新規作成</h2>
-        </div>
-        <div class='task'>
-            <h1>お金管理</h1>
-            <h2 class='title'>支出</h2>
-            <h2 class='title'>新規作成</h2>
-        </div>
+            <form action="/tasks" method="POST">
+                {{ csrf_field() }}
+                <div class="title">
+                    <h2>Title</h2>
+                <input type="text" name="task[title]" placeholder="タイトル"/>
+                </div>
+                <input type="submit" value="store"/>
+            </form>
         <div class='back'>[<a href='/'>back</a>]</div>
     </body>
     </html>

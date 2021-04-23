@@ -14,4 +14,14 @@ class TaskController extends Controller
     {
         return view('Task.show')->with(['task' => $task]);
     }
+    public function create(Task $task)
+    {
+        return view('Task.create');
+    }
+    public function store(Request $request, Task $task)
+    {
+    $input = $request['post'];
+    $post->fill($input)->save();
+    return redirect('/tasks/' . $task->id);
+    }
 }

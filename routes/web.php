@@ -12,5 +12,8 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
 Route::get('/', 'App\Http\Controllers\TaskController@index');
+Route::get('/tasks/create', 'App\Http\Controllers\TaskController@create');
 Route::get('/tasks/{task}', 'App\Http\Controllers\TaskController@show');
+Route::post('/tasks', 'App\Http\Controllers\TaskController@store');
