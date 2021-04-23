@@ -8,14 +8,19 @@
     </head>
     <body>
         <div class='task'>
-       <h1 class="title">
-            {{ $task->title }}
-        </h1>
-        <div class="content">
-            <div class="content__task">
-                <h3>新規作成</h3>
-            </div>
+            <h1>ToDo</h1>
+            <h2 class='title'>やること</h2>
+            <h2 class='title'>新規作成</h2>
         </div>
+        <div class='task'>
+            <h1>持ち物リスト</h1>
+            <h2 class='title'>本</h2>
+            <h2 class='title'>新規作成</h2>
+        </div>
+        <div class='task'>
+            <h1>お金管理</h1>
+            <h2 class='title'>支出</h2>
+            <h2 class='title'>新規作成</h2>
         </div>
         <div class='back'>[<a href='/'>back</a>]</div>
     </body>

@@ -10,13 +10,13 @@
         <h1>ToDo</h1>
         <div class='tasks'>
             <div class='task'>
-                 <h2 class='title'>Todo</h2>
+                <a href='/tasks/1'><h2 class='title'>Todo</h2></a>
             </div>
             <div class='task'>
-                <h2 class='title'>持ち物リスト</h2>
+                <a href='/tasks/2'><h2 class='title'>持ち物リスト</h2></a>
             </div>
             <div class='task'>
-                 <h2 class='title'>お金管理</h2>
+                 <a href='/tasks/3'><h2 class='title'>お金管理</h2></a>
             </div>
         </div>
     </body>
