@@ -18,10 +18,10 @@ class TaskController extends Controller
     {
         return view('Task.create');
     }
-    public function store(Request $request, Task $task)
+    public function store(Task $task, Request $request)
     {
-    $input = $request['post'];
-    $post->fill($input)->save();
+    $input = $request['task'];
+    $task->fill($input)->save();
     return redirect('/tasks/' . $task->id);
     }
 }
