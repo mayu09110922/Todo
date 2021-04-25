@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', 'App\Http\Controllers\TaskController@index');
-Route::get('/tasks/create', 'App\Http\Controllers\TaskController@create');
-Route::get('/tasks/{task}', 'App\Http\Controllers\TaskController@show');
-Route::post('/tasks', 'App\Http\Controllers\TaskController@store');
+Route::get('/', 'App\Http\Controllers\TodoController@index');
+Route::get('/todos/create', 'App\Http\Controllers\TodoController@create');
+Route::get('/todos/{todo}', 'App\Http\Controllers\TodoController@show');
+Route::post('/todos', 'App\Http\Controllers\TodoController@store');
