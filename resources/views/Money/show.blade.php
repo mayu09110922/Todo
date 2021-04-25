@@ -7,13 +7,11 @@
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
     </head>
     <body>
-         <div class='todo1'>
-            <h1 class='title'>Todo</h1>
-            <h2 class='body'>やること</h2>
-            @foreach ($todos as $todo)
-             <h2 class='body'>{{ $todo->body }}</h2>
-            @endforeach
-            <p class='create'>[<a href='/todos/create'>create</a>]</p>
+        <div class='todo2'>
+            <h1>お金管理</h1>
+            <h2 class='body'>収入</h2>
+            <h2 class='body'>{{ $money->body }}</h2>
+            <p class='create'>[<a href='/moneys/create'>create</a>]</p>
         </div>
         <div class='back'>[<a href='/'>back</a>]</div>
     </body>

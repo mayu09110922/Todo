@@ -2,12 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Todo;
+use App\Models\Have;
 use Illuminate\Http\Request;
 
 class HaveController extends Controller
 {
-    public function index(Have $have)
+     public function index(Have $have)
     {
         return view('Have.index')->with(['haves' => $have->get()]);
     }
