@@ -13,10 +13,10 @@
                 <a href='todos/1'><h2 class='title1'>Todo</h2></a>
             </div>
             <div class='todo'>
-                <a href='todos/2'><h2 class='title2'>持ち物リスト</h2></a>
+                <a href='haves/1'><h2 class='title2'>持ち物リスト</h2></a>
             </div>
             <div class='todo'>
-                <a href='todos/3'><h2 class='title3'>お金管理</h2></a>
+                <a href='moneys/1'><h2 class='title3'>お金管理</h2></a>
             </div>
         </div>
     </body>

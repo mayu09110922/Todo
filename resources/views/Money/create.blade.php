@@ -7,14 +7,15 @@
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
     </head>
     <body>
-         <div class='todo1'>
-            <h1 class='title'>Todo</h1>
-            <h2 class='body'>やること</h2>
-            @foreach ($todos as $todo)
-             <h2 class='body'>{{ $todo->body }}</h2>
-            @endforeach
-            <p class='create'>[<a href='/todos/create'>create</a>]</p>
-        </div>
+        
+            <form action="/moneys" method="POST">
+               @csrf
+                <div class="body">
+                    <h2>Title</h2>
+                <input type="text" name="money[body]" placeholder="タイトル"/>
+                </div>
+                 <input type="submit" value="store"/>
+            </form>
         <div class='back'>[<a href='/'>back</a>]</div>
     </body>
     </html>
