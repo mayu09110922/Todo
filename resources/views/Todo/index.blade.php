@@ -8,15 +8,15 @@
     </head>
     <body>
         <h1>ToDo</h1>
-        <div class='tasks'>
-            <div class='task'>
-                <a href='tasks/1'><h2 class='title1'>Todo</h2></a>
+        <div class='todos'>
+            <div class='todo'>
+                <a href='todos/1'><h2 class='title1'>Todo</h2></a>
             </div>
-            <div class='task'>
-                <a href='tasks/2'><h2 class='title2'>持ち物リスト</h2></a>
+            <div class='todo'>
+                <a href='todos/2'><h2 class='title2'>持ち物リスト</h2></a>
             </div>
-            <div class='task'>
-                <a href='tasks/3'><h2 class='title3'>お金管理</h2></a>
+            <div class='todo'>
+                <a href='todos/3'><h2 class='title3'>お金管理</h2></a>
             </div>
         </div>
     </body>

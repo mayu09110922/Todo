@@ -8,11 +8,11 @@
     </head>
     <body>
         
-            <form action="/tasks" method="POST">
+            <form action="/haves" method="POST">
                @csrf
                 <div class="body">
                     <h2>Title</h2>
-                <input type="text" name="task[body]" placeholder="タイトル"/>
+                <input type="text" name="have[body]" placeholder="タイトル"/>
                 </div>
                  <input type="submit" value="store"/>
             </form>
