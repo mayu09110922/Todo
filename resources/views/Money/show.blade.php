@@ -10,7 +10,10 @@
         <div class='todo2'>
             <h1>お金管理</h1>
             <h2 class='body'>収入</h2>
+            @foreach($moneys as $money)
             <h2 class='body'>{{ $money->body }}</h2>
+            @endforeach
+            {{ $moneys->links() }}
             <p class='create'>[<a href='/moneys/create'>create</a>]</p>
         </div>
         <div class='back'>[<a href='/'>back</a>]</div>
