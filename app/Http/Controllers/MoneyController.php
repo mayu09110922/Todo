@@ -13,7 +13,7 @@ class MoneyController extends Controller
     }
     public function show(Money $money)
     {
-        return view('Money.show')->with(['money' => $money]);
+        return view('Money.show')->with(['moneys' => $money->getPaginateByLimit(5)]);
     }
     public function create(Money $money)
     {

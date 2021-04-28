@@ -13,7 +13,7 @@ class TodoController extends Controller
     }
     public function show(Todo $todo)
     {
-        return view('Todo.show')->with(['todo' => $todo]);
+        return view('Todo.show')->with(['todos' => $todo->getPaginateByLimit(5)]);
     }
     public function create(Todo $todo)
     {

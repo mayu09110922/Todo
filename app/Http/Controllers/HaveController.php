@@ -13,7 +13,7 @@ class HaveController extends Controller
     }
     public function show(Have $have)
     {
-        return view('Have.show')->with(['have' => $have]);
+        return view('Have.show')->with(['haves' => $have->getPaginateByLimit(5)]);
     }
     public function create(Have $have)
     {
