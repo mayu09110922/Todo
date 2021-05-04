@@ -10,9 +10,16 @@
         
             <form action="/todos" method="POST">
                @csrf
-                <div class="body">
+                <div class="title">
                     <h2>Title</h2>
-                <input type="text" name="todo[body]" placeholder="タイトル"/>
+                <input type="text" name="todo[title]" placeholder="タイトル"/>
+                <p class="title__error" style="color:red">{{ $errors->first('todo.title') }}</p>
+                   <h2>Body</h2>
+                <textarea name="todo[body]" placeholder="詳細"></textarea>
+                <p class="body__error" style="color:red">{{ $errors->first('todo.body') }}</p>
+                   <h2>Date</h2>
+                <input type="date" name="todo[limit]"/>
+                <p class="limit__error" style="color:red">{{ $errors->first('todo.limit') }}</p>
                 </div>
                  <input type="submit" value="store"/>
             </form>

@@ -11,9 +11,9 @@ class HaveController extends Controller
     {
         return view('Have.index')->with(['haves' => $have->get()]);
     }
-    public function show(Have $have)
+    public function list(Have $have)
     {
-        return view('Have.show')->with(['haves' => $have->getPaginateByLimit(5)]);
+        return view('Have.list')->with(['haves' => $have->getPaginateByLimit(5)]);
     }
     public function create(Have $have)
     {
