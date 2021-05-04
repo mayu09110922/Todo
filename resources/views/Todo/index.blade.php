@@ -10,7 +10,7 @@
         <h1>ToDo</h1>
         <div class='todos'>
             <div class='todo'>
-                <a href='todos/1'><h2 class='title1'>Todo</h2></a>
+                <a href='todos/'><h2 class='title1'>Todo</h2></a>
             </div>
             <div class='todo'>
                 <a href='haves/1'><h2 class='title2'>持ち物リスト</h2></a>

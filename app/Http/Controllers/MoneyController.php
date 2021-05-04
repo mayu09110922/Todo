@@ -11,9 +11,9 @@ class MoneyController extends Controller
     {
         return view('Money.index')->with(['moneys' => $money->get()]);
     }
-    public function show(Money $money)
+    public function list(Money $money)
     {
-        return view('Money.show')->with(['moneys' => $money->getPaginateByLimit(5)]);
+        return view('Money.list')->with(['moneys' => $money->getPaginateByLimit(5)]);
     }
     public function create(Money $money)
     {
