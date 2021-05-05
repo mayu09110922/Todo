@@ -9,7 +9,7 @@
     <body>
          <div class='todo1'>
             <h1 class='title'>Todo</h1>
-            <h2 class='body'>やること</h2>
+          
             @foreach($todos as $todo)
              <h2 class='title'>{{ $todo->title }}</h2>
              <h3 class='body'>{{ $todo->body }}</h3>
@@ -18,8 +18,9 @@
               <form action="/todos/{{ $todo->id }}" id="form_{{ $todo->id }}" method="POST">
                 @csrf
                 @method('DELETE')
-                <input type="submit" style="display:none">
-                <p class='delete'>[<span onclick="return deleteTodo(this);">delete</span>]</p>
+                <p class='delete'>
+                <input type="submit" style="display:none"> [<span onclick="return deleteTodo(this);"><button>delete</button></span>]
+                </p>
             </form>
              @endforeach
              {{ $todos->links() }}
