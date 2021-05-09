@@ -9,6 +9,11 @@
     <body>
          <div class='todo1'>
             <h1 class='title'>Todo</h1>
+            <th>@sortablelink('title', 'タイトル順')</th>
+            <th>@sortablelink('create', '作成順')</th>
+            <th>@sortablelink('update', '更新順')</th>
+　　　　　　<th>@sortablelink('limit', '日付順')</th>
+          <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
           
             @foreach($todos as $todo)
              <h2 class='title'>{{ $todo->title }}</h2>
@@ -23,10 +28,15 @@
                 </p>
             </form>
              @endforeach
+             
              {{ $todos->links() }}
+            {{!! $todos->links() !!}}
+　　　　　　{{ $todos->appends(request()->query())->links() }}
+            
             <p class='create'>[<a href='/todos/create'>create</a>]</p>
         </div>
         <div class='back'>[<a href='/'>back</a>]</div>
+        
         <script>
             function deleteTodo(e){
                 if(confirm('削除すると復元できません。\n本当に削除しますか？')){
