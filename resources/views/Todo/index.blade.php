@@ -8,16 +8,25 @@
     </head>
     <body>
         <h1>ToDo</h1>
-        <div class='todos'>
-            <div class='todo'>
-                <a href='todos/'><h2 class='title1'>Todo</h2></a>
-            </div>
-            <div class='todo'>
-                <a href='haves/1'><h2 class='title2'>持ち物リスト</h2></a>
-            </div>
-            <div class='todo'>
-                <a href='moneys/1'><h2 class='title3'>お金管理</h2></a>
-            </div>
+            <th>@sortablelink('title', 'タイトル順')</th>
+            <th>@sortablelink('create', '作成順')</th>
+            <th>@sortablelink('update', '更新順')</th>
+　　　　　　<th>@sortablelink('limit', '日付順')</th>
+          <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+          
+          <p class='create'>[<a href='/todos/create'>create</a>]</p>
+       <div class='todos'>
+            @foreach ($todos as $todo)
+                <div class='todo'>
+                    <h2 class='title'>{{ $todo->title }}</h2>
+                    <h3><a href="/todos/{{ $todo->id }}">{{ $todo->title }}</a>
+                    <p class='body'>{{ $todo->body }}</p>
+                </div>
+            @endforeach
         </div>
+         <div class='paginate'>
+            {{ $todos->links() }}
+        </div>
+        <div class='back'>[<a href='/'>back</a>]</div>
     </body>
     </html>
