@@ -7,15 +7,20 @@ use App\Http\Requests\TodoRequest;
 
 class TodoController extends Controller
 {
+    public function menu(Todo $todo)
+     {
+        return view('Todo.menu')->with(['todos' => $todo->get()]);
+    }
+    
     public function index(Todo $todo)
     {
-        return view('Todo.index')->with(['todos' => $todo->get()]);
+        return view('Todo.index')->with(['todos' => $todo->getPaginateByLimit(5)]);
     }
     
     public function show(Todo $todo)
     {
         $todos = $todo->sortable();
-        return view('Todo.show')->with(['todos' => $todo->getPaginateByLimit(5)]);
+        return view('Todo.show')->with(['todo' => $todo]);
     }
     
     public function create(Todo $todo)
@@ -45,6 +50,6 @@ class TodoController extends Controller
     public function destroy(Todo $todo)
     {
         $todo->delete();
-        return redirect('https://6f411331d49b4b949d6d1058fb3cf883.vfs.cloud9.ap-northeast-1.amazonaws.com/todos/1');
+        return redirect('https://6f411331d49b4b949d6d1058fb3cf883.vfs.cloud9.ap-northeast-1.amazonaws.com/todos/');
     }
 }
