@@ -14,7 +14,7 @@ class TodoController extends Controller
     
     public function index(Todo $todo)
     {
-        return view('Todo.index')->with(['todos' => $todo->getPaginateByLimit(5)]);
+        return view('Todo.index')->with(['todos' => $todo->sortable()->get()]);
     }
     
     public function show(Todo $todo)

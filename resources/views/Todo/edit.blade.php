@@ -12,15 +12,18 @@
                @csrf
                @method('PUT')
                 <div class="title">
-                    <h2>Title</h2>
+                    <h2>タイトル</h2>
                 <input type="text" name="todo[title]" placeholder="タイトル" value="{{ $todo->title }}"/>
-                   <h2>Body</h2>
+                <p class="title__error" style="color:red">{{ $errors->first('todo.title') }}</p>
+                   <h2>詳細</h2>
                 <textarea name="todo[body]" placeholder="詳細">{{ $todo->body }}</textarea>
-                   <h2>Date</h2>
+                 <p class="body__error" style="color:red">{{ $errors->first('todo.body') }}</p>
+                   <h2>日付</h2>
                 <input type="date" name="todo[limit]"/>
+                <p class="limit__error" style="color:red">{{ $errors->first('todo.limit') }}</p>
                 </div>
-                 <input type="submit" value="update"/>
+                 <input type="submit" value="更新"/>
             </form>
-        <div class='back'>[<a href='/todos/{{ $todo->id }}'>back</a>]</div>
+        <div class='back'>[<a href='/todos/{{ $todo->id }}'>戻る</a>]</div>
     </body>
     </html>

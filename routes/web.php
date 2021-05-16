@@ -24,10 +24,16 @@ Route::delete('/todos/{todo}', 'App\Http\Controllers\TodoController@destroy');
 
 Route::get('/haves', 'App\Http\Controllers\HaveController@index');
 Route::get('/haves/create', 'App\Http\Controllers\HaveController@create');
-Route::get('/haves/{have}', 'App\Http\Controllers\HaveController@list');
+Route::get('/haves/{have}', 'App\Http\Controllers\HaveController@show');
 Route::post('/haves', 'App\Http\Controllers\HaveController@store');
+Route::get('/haves/{have}/edit', 'App\Http\Controllers\HaveController@edit');
+Route::put('/haves/{have}', 'App\Http\Controllers\HaveController@update');
+Route::delete('/haves/{have}', 'App\Http\Controllers\HaveController@destroy');
 
 Route::get('/moneys', 'App\Http\Controllers\MoneyController@index');
 Route::get('/moneys/create', 'App\Http\Controllers\MoneyController@create');
-Route::get('/moneys/{money}', 'App\Http\Controllers\MoneyController@list');
 Route::post('/moneys', 'App\Http\Controllers\MoneyController@store');
+Route::get('/moneys/{money}', 'App\Http\Controllers\MoneyController@show');
+Route::get('/moneys/{money}/edit', 'App\Http\Controllers\MoneyController@edit');
+Route::put('/moneys/{money}', 'App\Http\Controllers\MoneyController@update');
+Route::delete('/moneys/{money}', 'App\Http\Controllers\MoneyController@destroy');

@@ -11,18 +11,18 @@
             <form action="/todos" method="POST">
                @csrf
                 <div class="title">
-                    <h2>Title</h2>
-                <input type="text" name="todo[title]" placeholder="タイトル"/>
+                    <h2>タイトル</h2>
+                <input type="text" name="todo[title]" placeholder="例）買い物"/>
                 <p class="title__error" style="color:red">{{ $errors->first('todo.title') }}</p>
-                   <h2>Body</h2>
-                <textarea name="todo[body]" placeholder="詳細"></textarea>
+                   <h2>詳細</h2>
+                <textarea name="todo[body]" placeholder="例）スーパー：トマト、玉ねぎ"></textarea>
                 <p class="body__error" style="color:red">{{ $errors->first('todo.body') }}</p>
-                   <h2>Date</h2>
+                   <h2>日付</h2>
                 <input type="date" name="todo[limit]"/>
                 <p class="limit__error" style="color:red">{{ $errors->first('todo.limit') }}</p>
                 </div>
-                 <input type="submit" value="store"/>
+                 <input type="submit" value="保存"/>
             </form>
-        <div class='back'>[<a href='/'>back</a>]</div>
+        <div class='back'>[<a href='/todos'>戻る</a>]</div>
     </body>
     </html>

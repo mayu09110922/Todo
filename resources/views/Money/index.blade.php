@@ -7,17 +7,22 @@
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
     </head>
     <body>
-        <h1>ToDo</h1>
-        <div class='todos'>
-            <div class='todo'>
-                <a href='todos/1'><h2 class='title1'>Todo</h2></a>
-            </div>
-            <div class='todo'>
-                <a href='haves/1'><h2 class='title2'>持ち物リスト</h2></a>
-            </div>
-            <div class='todo'>
-                <a href='moneys/1'><h2 class='title3'>お金管理</h2></a>
-            </div>
+        <h1>お金管理</h1>
+            <th>@sortablelink('title', 'タイトル順')</th>
+            <th>@sortablelink('created_at', '作成順')</th>
+            <th>@sortablelink('updated_at', '更新順')</th>
+　　　　　　<th>@sortablelink('limit', '日付順')</th>
+          <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+          
+          <p class='create'>[<a href='/moneys/create'>新規作成</a>]</p>
+       <div class='moneys'>
+            @foreach ($moneys as $money)
+                <div class='money'>
+                    <h3><a href="/moneys/{{ $money->id }}">{{ $money->title }}</a>
+                </div>
+            @endforeach
         </div>
+         
+        <div class='back'>[<a href='/'>戻る</a>]</div>
     </body>
     </html>
