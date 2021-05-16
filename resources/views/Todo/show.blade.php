@@ -14,18 +14,18 @@
             <p class='date'>{{ $todo->limit }}</p>
         </div>
              
-             <p class='edit'>[<a href="/todos/{{ $todo->id }}/edit">edit</a>]</p>
+             <p class='edit'>[<a href="/todos/{{ $todo->id }}/edit">編集</a>]</p>
              
               <form action="/todos/{{ $todo->id }}" id="form_{{ $todo->id }}" method="POST">
                 @csrf
                 @method('DELETE')
                 <p class='delete'>
-                <input type="submit" style="display:none"> [<span onclick="return deleteTodo(this);"><button>delete</button></span>]
+                <input type="submit" style="display:none"> [<span onclick="return deleteTodo(this);"><button>削除</button></span>]
                 </p>
             </form>
         
         
-        <div class='back'>[<a href='/todos/'>back</a>]</div>
+        <div class='back'>[<a href='/todos/'>戻る</a>]</div>
         
         <script>
             function deleteTodo(e){

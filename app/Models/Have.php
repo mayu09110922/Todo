@@ -2,16 +2,18 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Kyslik\ColumnSortable\Sortable;
 
 class Have extends Model
 {
+    use Sortable;
+    
     protected $fillable = [
+    'title',
     'body',
+    'limit'
 ];
-public function getPaginateByLimit(int $limit_count = 10)
-{
-    return $this->orderBy('updated_at', 'DESC')->paginate($limit_count);
-}
+
+    public $sortable = ['id','title','created_at','updated_at', 'limit'];
 }

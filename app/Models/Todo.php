@@ -15,11 +15,5 @@ class Todo extends Model
     'limit'
 ];
 
-    public $sortableAs = ['id','title','created_at','updated_at', 'limit'];
-
-
-public function getPaginateByLimit(int $limit_count = 10)
-{
-    return $this->paginate($limit_count);
-}
+    public $sortable = ['id','title','created_at','updated_at', 'limit'];
 }
