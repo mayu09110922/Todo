@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Models\Todo;
 use App\Http\Requests\TodoRequest; 
+use Spatie\GoogleCalendar\Event;
+
+
 
 class TodoController extends Controller
 {
@@ -51,5 +54,10 @@ class TodoController extends Controller
     {
         $todo->delete();
         return redirect('https://6f411331d49b4b949d6d1058fb3cf883.vfs.cloud9.ap-northeast-1.amazonaws.com/todos/');
+    }
+    
+    public function google_calendar()
+    {
+        $events = Event::get(); 
     }
 }
