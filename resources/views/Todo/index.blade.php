@@ -16,14 +16,20 @@
           
           <p class='create'>[<a href='/todos/create'>新規作成</a>]</p>
         
+        <text>★今月の予定★</text>
+        
+        <iframe src="https://calendar.google.com/calendar/embed?src=m3crjgebm5vloqqehsuuut9iks%40group.calendar.google.com&ctz=Asia%2FTokyo" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+         
        <div class='todos'>
             @foreach ($todos as $todo)
                 <div class='todo'>
                     <h3><a href="/todos/{{ $todo->id }}">{{ $todo->title }}</a>
+                    <h4>{{ $todo->limit }}</h4>
                 </div>
             @endforeach
         </div>
-         
+        
+        
         <div class='back'>[<a href='/'>戻る</a>]</div>
     </body>
     </html>

@@ -21,6 +21,7 @@ Route::get('/todos/{todo}', 'App\Http\Controllers\TodoController@show');
 Route::get('/todos/{todo}/edit', 'App\Http\Controllers\TodoController@edit');
 Route::put('/todos/{todo}', 'App\Http\Controllers\TodoController@update');
 Route::delete('/todos/{todo}', 'App\Http\Controllers\TodoController@destroy');
+Route::get('/google/events','App\Http\Controllers\TodoController@google_calendar');
 
 Route::get('/haves', 'App\Http\Controllers\HaveController@index');
 Route::get('/haves/create', 'App\Http\Controllers\HaveController@create');
