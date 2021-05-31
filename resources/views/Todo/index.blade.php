@@ -29,7 +29,6 @@
             @endforeach
         </div>
         
-        
         <div class='back'>[<a href='/'>戻る</a>]</div>
     </body>
     </html>
